@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>阿里百秀案例-1280px的设计稿</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="bootstrap/js/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+</head>
+<!-- 中等屏幕 大屏幕布局一致 因此可以以中等屏幕为标准 -->
+<!-- 小屏幕和超小屏幕布局均不相同 -->
+<!-- 因此可以先将中等屏幕的写好 最后根据小屏幕 超小屏幕布局再相应修改 -->
+
+<body>
+    <div class="container">
+
+        <div class="row">
+            <header class="col-md-2">
+                <div class="logo">
+                    <a href="#">
+                        <!-- 设置属性  使其在超小屏幕时候 隐藏起来 -->
+                        <img src="images/logo.png" alt="" class="hidden-xs">
+                        <!-- 增加一个盒子 使其只有在超小屏幕时候才显示出来 -->
+                        <span class="visible-xs">阿里百秀</span>
+                    </a>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="#" class="glyphicon glyphicon-camera">生活馆</a></li>
+                        <li><a href="#" class="glyphicon glyphicon-picture">自然汇</a></li>
+                        <li><a href="#" class="glyphicon glyphicon-phone">科技潮</a></li>
+                        <li><a href="#" class="glyphicon glyphicon-gift">奇趣事</a></li>
+                        <li><a href="#" class="glyphicon glyphicon-star-empty">美食节</a></li>
+                    </ul>
+                </div>
+            </header>
+            <article class="col-md-7">
+                <!-- 新闻模块 -->
+                <!-- 因为news部分浮动 所以下面publish添加了border看不见 所以要清除浮动 -->
+                <div class="news clearfix">
+                    <ul>
+                        <li>
+                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <img src="upload/banner.dpg" alt="...">
+                                        <div class="carousel-caption">
+                                            这是第一张图片
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="upload/banner1.dpg" alt="...">
+                                        <div class="carousel-caption">
+                                            这是第二张图片
+                                        </div>
+                                    </div>
+                                    <div class="item active">
+                                        <img src="upload/banner2.dpg" alt="...">
+                                        <div class="carousel-caption">
+                                            这是第三张图片
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                            <script>
+                                $('.carousel').carousel({
+                                    interval: 2000
+                                })
+                            </script>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="upload/1.jpg" alt="">
+                                <p>奇了 成都一小区护卫长得像马云 市民纷纷求合影</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="upload/2.jpg" alt="">
+                                <p>奇了 成都一小区护卫长得像马云 市民纷纷求合影</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="upload/3.jpg" alt="">
+                                <p>奇了 成都一小区护卫长得像马云 市民纷纷求合影</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="upload/4.jpg" alt="">
+                                <p>奇了 成都一小区护卫长得像马云 市民纷纷求合影</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 发表模块 -->
+                <div class="publish">
+                    <div class="row">
+                        <!-- 根据设计稿知道 该部分小屏幕 中等屏幕 大屏幕时候都是9-3分 -->
+                        <!-- 因此采取col-sm-9 -->
+                        <div class="col-sm-9">
+                            <h3>生活馆 关于指甲的10个健康知识 你知道几个？</h3>
+                            <p class="text-muted  hidden-xs">alibaixiu 发布于 2015-11-23</p>
+                            <p class=" hidden-xs">指甲是经常容易被人们所忽略的身体部位，事实上从指甲的健康状况可以看出一个人的身体状况，快来看看10个隐藏在指甲里的知识吧！</p>
+                            <p class="text-muted ">阅读(2417)评论(1)赞(18) <span class=" hidden-xs">标签：健康 / 感染 / 指甲 / 疾病 / 皮肤 /趣味生活 </span></p>
+                        </div>
+                        <div class="col-sm-3 pic hidden-xs"><img src="upload/3.jpg" alt=""></div>
+                    </div>
+                    <div class="row">
+                        <!-- 根据设计稿知道 该部分小屏幕 中等屏幕 大屏幕时候都是9-3分 -->
+                        <!-- 因此采取col-sm-9 -->
+                        <div class="col-sm-9">
+                            <h3>生活馆 关于指甲的10个健康知识 你知道几个？</h3>
+                            <p class="text-muted  hidden-xs">alibaixiu 发布于 2015-11-23</p>
+                            <p class=" hidden-xs">指甲是经常容易被人们所忽略的身体部位，事实上从指甲的健康状况可以看出一个人的身体状况，快来看看10个隐藏在指甲里的知识吧！</p>
+                            <p class="text-muted">阅读(2417)评论(1)赞(18) <span class=" hidden-xs">标签：健康 / 感染 / 指甲 / 疾病 / 皮肤 /趣味生活 </span> </p>
+                        </div>
+                        <div class="col-sm-3 pic hidden-xs "><img src="upload/3.jpg" alt=""></div>
+                    </div>
+                    <div class="row">
+                        <!-- 根据设计稿知道 该部分小屏幕 中等屏幕 大屏幕时候都是9-3分 -->
+                        <!-- 因此采取col-sm-9 -->
+                        <div class="col-sm-9">
+                            <h3>生活馆 关于指甲的10个健康知识 你知道几个？</h3>
+                            <p class="text-muted  hidden-xs">alibaixiu 发布于 2015-11-23</p>
+                            <p class=" hidden-xs">指甲是经常容易被人们所忽略的身体部位，事实上从指甲的健康状况可以看出一个人的身体状况，快来看看10个隐藏在指甲里的知识吧！</p>
+                            <p class="text-muted  ">阅读(2417)评论(1)赞(18) <span class=" hidden-xs">标签：健康 / 感染 / 指甲 / 疾病 / 皮肤 /趣味生活 </span></p>
+                        </div>
+                        <div class="col-sm-3 pic  hidden-xs"><img src="upload/3.jpg" alt=""></div>
+                    </div>
+                    <div class="row">
+                        <!-- 根据设计稿知道 该部分小屏幕 中等屏幕 大屏幕时候都是9-3分 -->
+                        <!-- 因此采取col-sm-9 -->
+                        <div class="col-sm-9">
+                            <h3>生活馆 关于指甲的10个健康知识 你知道几个？</h3>
+                            <p class="text-muted  hidden-xs">alibaixiu 发布于 2015-11-23</p>
+                            <p class=" hidden-xs">指甲是经常容易被人们所忽略的身体部位，事实上从指甲的健康状况可以看出一个人的身体状况，快来看看10个隐藏在指甲里的知识吧！</p>
+                            <p class="text-muted  ">阅读(2417)评论(1)赞(18) <span class=" hidden-xs">标签：健康 / 感染 / 指甲 / 疾病 / 皮肤 /趣味生活 </span> </p>
+                        </div>
+                        <div class="col-sm-3 pic  hidden-xs"><img src="upload/3.jpg" alt=""></div>
+                    </div>
+                    <div class="row">
+                        <!-- 根据设计稿知道 该部分小屏幕 中等屏幕 大屏幕时候都是9-3分 -->
+                        <!-- 因此采取col-sm-9 -->
+                        <div class="col-sm-9">
+                            <h3>生活馆 关于指甲的10个健康知识 你知道几个？</h3>
+                            <p class="text-muted  hidden-xs">alibaixiu 发布于 2015-11-23</p>
+                            <p class=" hidden-xs">指甲是经常容易被人们所忽略的身体部位，事实上从指甲的健康状况可以看出一个人的身体状况，快来看看10个隐藏在指甲里的知识吧！</p>
+                            <p class="text-muted  ">阅读(2417)评论(1)赞(18) <span class=" hidden-xs">标签：健康 / 感染 / 指甲 / 疾病 / 皮肤 /趣味生活 </span> </p>
+                        </div>
+                        <div class="col-sm-3 pic  hidden-xs"><img src="upload/3.jpg" alt=""></div>
+                    </div>
+                </div>
+            </article>
+            <aside class="col-md-3">
+                <a href="#" class="banner">
+                    <img src="upload/zgboke.jpg" alt="">
+                </a>
+                <a href="#" class="hot">
+                    <span class="btn btn-primary">热搜</span>
+                    <h4>欢迎加入中国博客联盟</h4>
+                    <p>这里收录国内各个领域的优秀博客，是一个全人工编辑的开放式博客联盟平台...</p>
+                </a>
+            </aside>
+        </div>
+    </div>
+</body>
+
+</html>
